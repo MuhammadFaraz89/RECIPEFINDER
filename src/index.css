@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e1e9f0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items */
+    min-height: 100vh; /* Ensure body takes full height */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Darker shade for contrast */
+    margin: 20px 0; /* Add margin for spacing */
+    font-size: 2.5rem; /* Larger font size for the title */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Max width for larger screens */
+    padding: 12px; /* Increased padding for a modern look */
+    margin-right: 10px;
+    border: 1px solid #bdc3c7; /* Lighter border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+input[type="text"]:focus {
+    border-color: #3498db; /* Change border color on focus */
+}
+
+select {
+    padding: 12px; /* Increased padding for a modern look */
+    border: 1px solid #bdc3c7; /* Lighter border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+select:focus {
+    border-color: #3498db; /* Change border color on focus */
+}
+
+.container {
+    max-width: 80vw;
+    margin: 20px auto;    
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center; /* Center items */
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+@media (min-width: 600px) {
+    .search-bar {
+        flex-direction: row; /* Change to row on larger screens */
+    }
+   
+}
+@media (min-width: 300px) {
+    .search-bar {
+        flex-direction: row; /* Change to row on larger screens */
+    }
+   
+}
+@media (max-width: 331px) {
+   h1{
+    text-align: center;
+    color: #2c3e50; /* Darker shade for contrast */
+    margin: 15px 0; /* Add margin for spacing */
+    font-size: 2rem; /* Larger font size for the title */
+   }
+   
+}
+@media (min-width: 300px) {
+    .search-bar {
+        flex-direction: row; /* Change to row on larger screens */
+    }
+   
+}
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem; 
+}
+
+.recipe-item {
+    flex-basis: 100%; /* Full width on small screens */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for shadow */
+    border-radius: 5px;
+    padding: 15px; /* Increased padding for a better layout */
+    background-color: #ffffff; /* White background for recipe items */
+    border-left: 5px solid #3498db; /* Left border for a modern touch */
+}
+
+@media (min-width: 600px) {
+    .recipe-item {
+        flex-basis: 45%; /* Two items per row on medium screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .recipe-item {
+        flex-basis: 30%; /* Three items per row on larger screens */
+    }
+}
+
+.recipe-item:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.no-recipes {
+    text-align: center;
+    color: #888;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
